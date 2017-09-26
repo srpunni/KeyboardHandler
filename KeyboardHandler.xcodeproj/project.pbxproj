@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A51C301C1F7A82F9000F3CE1 /* KeyboardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A51C301A1F7A82F9000F3CE1 /* KeyboardHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F207332C3A6809CABE555E85 /* Pods_KeyboardHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4B2915476AE8E283F1F5F /* Pods_KeyboardHandler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6705384180C2C18817EC63A5 /* Pods-KeyboardHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardHandler/Pods-KeyboardHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		95C756885148255816284E87 /* Pods-KeyboardHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardHandler/Pods-KeyboardHandler.release.xcconfig"; sourceTree = "<group>"; };
 		A51C30171F7A82F9000F3CE1 /* KeyboardHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51C301A1F7A82F9000F3CE1 /* KeyboardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardHandler.h; sourceTree = "<group>"; };
 		A51C301B1F7A82F9000F3CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6B4B2915476AE8E283F1F5F /* Pods_KeyboardHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +25,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F207332C3A6809CABE555E85 /* Pods_KeyboardHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CAB8D6EAABAF77B450A5567 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6705384180C2C18817EC63A5 /* Pods-KeyboardHandler.debug.xcconfig */,
+				95C756885148255816284E87 /* Pods-KeyboardHandler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F7D5870ED24270DE6906592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6B4B2915476AE8E283F1F5F /* Pods_KeyboardHandler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A51C300D1F7A82F9000F3CE1 = {
 			isa = PBXGroup;
 			children = (
 				A51C30191F7A82F9000F3CE1 /* KeyboardHandler */,
 				A51C30181F7A82F9000F3CE1 /* Products */,
+				4CAB8D6EAABAF77B450A5567 /* Pods */,
+				4F7D5870ED24270DE6906592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A51C301F1F7A82F9000F3CE1 /* Build configuration list for PBXNativeTarget "KeyboardHandler" */;
 			buildPhases = (
+				F28F75BAB6B572BE09612C77 /* [CP] Check Pods Manifest.lock */,
 				A51C30121F7A82F9000F3CE1 /* Sources */,
 				A51C30131F7A82F9000F3CE1 /* Frameworks */,
 				A51C30141F7A82F9000F3CE1 /* Headers */,
 				A51C30151F7A82F9000F3CE1 /* Resources */,
+				9C694CC70377CCE200A03EC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +151,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C694CC70377CCE200A03EC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardHandler/Pods-KeyboardHandler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F28F75BAB6B572BE09612C77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A51C30121F7A82F9000F3CE1 /* Sources */ = {
@@ -240,6 +299,7 @@
 		};
 		A51C30201F7A82F9000F3CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6705384180C2C18817EC63A5 /* Pods-KeyboardHandler.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -258,6 +318,7 @@
 		};
 		A51C30211F7A82F9000F3CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C756885148255816284E87 /* Pods-KeyboardHandler.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
