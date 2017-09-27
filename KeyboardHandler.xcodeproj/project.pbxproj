@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A51C301C1F7A82F9000F3CE1 /* KeyboardHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A51C301A1F7A82F9000F3CE1 /* KeyboardHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5BBF7311F7B7F8A00B6CD82 /* doneToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BBF72F1F7B7F8A00B6CD82 /* doneToolbar.xib */; };
+		A5BBF7321F7B7F8A00B6CD82 /* KAScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BBF7301F7B7F8A00B6CD82 /* KAScrollView.swift */; };
 		F207332C3A6809CABE555E85 /* Pods_KeyboardHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B4B2915476AE8E283F1F5F /* Pods_KeyboardHandler.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +19,8 @@
 		A51C30171F7A82F9000F3CE1 /* KeyboardHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51C301A1F7A82F9000F3CE1 /* KeyboardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardHandler.h; sourceTree = "<group>"; };
 		A51C301B1F7A82F9000F3CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BBF72F1F7B7F8A00B6CD82 /* doneToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = doneToolbar.xib; sourceTree = "<group>"; };
+		A5BBF7301F7B7F8A00B6CD82 /* KAScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KAScrollView.swift; sourceTree = "<group>"; };
 		C6B4B2915476AE8E283F1F5F /* Pods_KeyboardHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 		A51C30191F7A82F9000F3CE1 /* KeyboardHandler */ = {
 			isa = PBXGroup;
 			children = (
+				A5BBF72F1F7B7F8A00B6CD82 /* doneToolbar.xib */,
+				A5BBF7301F7B7F8A00B6CD82 /* KAScrollView.swift */,
 				A51C301A1F7A82F9000F3CE1 /* KeyboardHandler.h */,
 				A51C301B1F7A82F9000F3CE1 /* Info.plist */,
 			);
@@ -121,6 +127,7 @@
 				TargetAttributes = {
 					A51C30161F7A82F9000F3CE1 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BBF7311F7B7F8A00B6CD82 /* doneToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BBF7321F7B7F8A00B6CD82 /* KAScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6705384180C2C18817EC63A5 /* Pods-KeyboardHandler.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -312,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.landmarkgroup.KeyboardHandler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -320,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95C756885148255816284E87 /* Pods-KeyboardHandler.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -354,6 +366,7 @@
 				A51C30211F7A82F9000F3CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
